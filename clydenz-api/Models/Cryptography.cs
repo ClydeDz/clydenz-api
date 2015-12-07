@@ -11,8 +11,9 @@ namespace clydenz_api.Models
     {
         public string generatePassword(string input)
         {
+            string shahash = sha256(input);
             MD5 md5Hash = MD5.Create();
-            string hash = GetMd5Hash(md5Hash,input);
+            string hash = GetMd5Hash(md5Hash,shahash);
             return hash;
         }
         private string GetMd5Hash(MD5 md5Hash, string input)
@@ -33,6 +34,17 @@ namespace clydenz_api.Models
 
             // Return the hexadecimal string.
             return sBuilder.ToString();
+        }
+        static string sha256(string password)
+        {
+            System.Security.Cryptography.SHA256Managed crypt = new System.Security.Cryptography.SHA256Managed();
+            System.Text.StringBuilder hash = new System.Text.StringBuilder();
+            byte[] crypto = crypt.ComputeHash(Encoding.UTF8.GetBytes(password), 0, Encoding.UTF8.GetByteCount(password));
+            foreach (byte theByte in crypto)
+            {
+                hash.Append(theByte.ToString("x2"));
+            }
+            return hash.ToString();
         }
     }
 }
