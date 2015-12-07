@@ -7,6 +7,7 @@ using System.Data.Entity.Migrations;
 
 namespace clydenz_api.Models
 {
+    [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))] 
     public class clydenz_apiContext : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.

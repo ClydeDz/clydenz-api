@@ -19,6 +19,11 @@ namespace clydenz_api.Controllers
         // GET: api/Users
         public IQueryable<Users> GetUsers()
         {
+            // returns hidden passwords
+            foreach (var xy in db.Users)
+            {
+                xy.Password = "******";
+            } 
             return db.Users;
         }
 
@@ -31,7 +36,7 @@ namespace clydenz_api.Controllers
             {
                 return NotFound();
             }
-
+            users.Password = "******"; // returns hidden passwords
             return Ok(users);
         }
 
@@ -50,7 +55,10 @@ namespace clydenz_api.Controllers
             }
 
             db.Entry(users).State = EntityState.Modified;
-
+            /**/
+            // To:Do add password confirmation 
+            //Users u = db.re
+            /**/
             try
             {
                 db.SaveChanges();

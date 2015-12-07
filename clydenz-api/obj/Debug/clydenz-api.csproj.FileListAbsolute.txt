@@ -46,3 +46,8 @@ F:\Application Projects\ApplicationProjects\ClydeNZ\clydenz-api\clydenz-api\bin\
 F:\Application Projects\ApplicationProjects\ClydeNZ\clydenz-api\clydenz-api\bin\Microsoft.Web.Infrastructure.dll
 F:\Application Projects\ApplicationProjects\ClydeNZ\clydenz-api\clydenz-api\bin\Swashbuckle.Core.dll
 F:\Application Projects\ApplicationProjects\ClydeNZ\clydenz-api\clydenz-api\bin\WebActivatorEx.dll
+F:\Application Projects\ApplicationProjects\ClydeNZ\clydenz-api\clydenz-api\bin\System.Web.Cors.dll
+F:\Application Projects\ApplicationProjects\ClydeNZ\clydenz-api\clydenz-api\bin\System.Web.Http.Cors.dll
+F:\Application Projects\ApplicationProjects\ClydeNZ\clydenz-api\clydenz-api\bin\System.Web.Http.Cors.xml
+F:\Application Projects\ApplicationProjects\ClydeNZ\clydenz-api\clydenz-api\bin\MySql.Data.dll
+F:\Application Projects\ApplicationProjects\ClydeNZ\clydenz-api\clydenz-api\bin\MySql.Data.Entity.EF6.dll

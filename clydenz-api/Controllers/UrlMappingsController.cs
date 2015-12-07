@@ -43,12 +43,25 @@ namespace clydenz_api.Controllers
             {
                 return BadRequest(ModelState);
             }
-
+            /* To match passwords for particular entry. Shift code to Users*/
+            //foreach (var xy in db.UrlMappings)
+            //{
+            //    if (id==xy.ID)//match db values with requested value in url
+            //    {
+            //        if (urlMapping.ShortUrl==xy.ShortUrl)//match passwrd of that particular entry
+            //        {
+            //            return StatusCode(HttpStatusCode.NoContent);
+            //        }
+            //        else
+            //        {
+            //            return BadRequest();
+            //        }
+            //    }
+            //}
             if (id != urlMapping.ID)
             {
                 return BadRequest();
             }
-
             db.Entry(urlMapping).State = EntityState.Modified;
 
             try
